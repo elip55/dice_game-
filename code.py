@@ -2,6 +2,7 @@ import random
 def main_code():
     min = 1
     max = 6
+
     roll = input("Press 'r' to roll the dice ")
     if roll == 'r' or roll == 'R' or roll == 'roll' or roll == 'Roll':
         print(random.randint(min,max))
@@ -14,3 +15,4 @@ def main_code():
         print("Thank you for visiting my program!")
 
 main_code()
+
