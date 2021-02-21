@@ -1,3 +1,4 @@
+
 import random 
 def main_code():
     min = 1
@@ -7,6 +8,9 @@ def main_code():
     if roll == 'r' or roll == 'R' or roll == 'roll' or roll == 'Roll':
         print(random.randint(min,max))
         print(random.randint(min,max))
+    else:
+        print("This is not a valid input!")
+         
     answer = input("Would you like to roll again?")
     while answer == 'yes' or answer == 'Yes':
         main_code()
@@ -15,4 +19,3 @@ def main_code():
         print("Thank you for visiting my program!")
 
 main_code()
-
