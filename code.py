@@ -12,7 +12,7 @@ def main_code():
         print("This is not a valid input!")
          
     answer = input("Would you like to roll again?")
-    while answer == 'yes' or answer == 'Yes':
+    while answer == 'yes' or answer == 'Yes' or answer == ' yes' or answer == ' Yes': 
         main_code()
         break
     else: 
