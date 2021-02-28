@@ -1,9 +1,12 @@
 
 import random
 
-def rules():
+def game_rules():
+    print("          RULES         ")
+    print("-------------------------")
     print("For now, this game is rather simple.")
     print("Each player roles the dice, the higher number wins.")
+    player_one()
  
 def player_one():
     min = 1
@@ -34,7 +37,7 @@ player_2 = input("Input player #2's name")
 
 rules = input("Do you need to read the rules? y/n ")
 if rules ==  'yes' or rules == 'Yes' or rules == 'y' or rules == 'Y':
-    rules()
+    game_rules()
 else:
     print("Okay, lets play")
     player_one()
