@@ -34,9 +34,11 @@ def main_game():
     sol_player_2 = num2 + num3
 
     if sol_player_1 > sol_player_2:
-        print(f"{player_1} won the game!")
+        plyr_1_win = player_1 + " won the game!"
+        print(plyr_1_win)
     elif sol_player_1 < sol_player_2: 
-        print(f"{player_2} won the game!")
+        plyr_2_win = player_2 + " won the game!"
+        print(plyr_2_win)
     elif sol_player_1 == sol_player_2:
         print("This was a draw!")
 
