@@ -2,7 +2,6 @@
 import random
 
 
-
 def intro():
     rules = input("Do you need to read the rules? y/n ")
     if rules ==  'yes' or rules == 'Yes' or rules == 'y' or rules == 'Y':
