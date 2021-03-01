@@ -1,6 +1,16 @@
 
 import random
 
+
+
+def intro():
+    rules = input("Do you need to read the rules? y/n ")
+    if rules ==  'yes' or rules == 'Yes' or rules == 'y' or rules == 'Y':
+        game_rules()
+    else:
+        print("Okay, lets play")
+        main_game()
+
 def game_rules():
     print("               RULES         ")
     print("-------------------------------------")
@@ -46,11 +56,4 @@ def main_game():
     elif sol_player_1 == sol_player_2:
         print("This was a draw!")
 
-
-rules = input("Do you need to read the rules? y/n ")
-if rules ==  'yes' or rules == 'Yes' or rules == 'y' or rules == 'Y':
-    game_rules()
-else:
-    print("Okay, lets play")
-    main_game()
-    
+intro()
