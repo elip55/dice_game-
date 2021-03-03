@@ -26,22 +26,35 @@ def main_game():
     player_2 = input("Input player #2's name")
 
     roll = input(f"{player_1}, press 'r' to roll the dice ")
-    if roll == 'r' or roll == 'R' or roll == 'roll' or roll == 'Roll':
+    if roll == 'r':
         num0 = int(random.randint(min,max))
         num1 = int(random.randint(min,max))
         print(num0)
         print(num1)
-    else:
+    while roll != 'r':
         print("This is not a valid input!")
+        roll = input("Press 'r' to roll the dice again.")
+        if roll == 'r':
+            num0 = int(random.randint(min,max))
+            num1 = int(random.randint(min,max))
+            print(num0)
+            print(num1)
+            
 
     roll = input(f"{player_2}, press 'r' to roll the dice ")
-    if roll == 'r' or roll == 'R' or roll == 'roll' or roll == 'Roll':
+    if roll == 'r':
         num2 = int(random.randint(min,max))
         num3 = int(random.randint(min,max))
         print(num2)
         print(num3)
-    else:
+    while roll != 'r':
         print("This is not a valid input!")
+        roll = input("Press 'r' to roll the dice again.")
+        if roll == 'r':
+            num2 = int(random.randint(min,max))
+            num3 = int(random.randint(min,max))
+            print(num2)
+            print(num3)
     
     sol_player_1 = num0 + num1
     sol_player_2 = num2 + num3
