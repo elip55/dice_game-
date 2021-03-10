@@ -68,4 +68,12 @@ def main_game():
     elif sol_player_1 == sol_player_2:
         print("This was a draw!")
 
+def play_again():
+    q =  input("Would you like to play again? y/n ")
+    if q == 'y' or q == ' y' or q == 'Y' or q == ' Y':
+        main_game()
+    elif q == 'n' or q == 'N' or q == 'no':
+        print("Thank you for visitng my program")
+
 intro()
+play_again()
