@@ -1,6 +1,6 @@
 
 import random
-
+from color_class import bcolors
 
 def intro():
     rules = input("Do you need to read the rules? y/n ")
@@ -60,20 +60,23 @@ def main_game():
     sol_player_2 = num2 + num3
 
     if sol_player_1 > sol_player_2:
-        plyr_1_win = player_1.upper() + " WON THE GAME!"
+        plyr_1_win = bcolors.OKBLUE + player_1.upper() + " WON THE GAME!" + bcolors.ENDC
         print(plyr_1_win)
     elif sol_player_1 < sol_player_2: 
-        plyr_2_win = player_2.upper() + " WON THE GAME!"
+        plyr_2_win = bcolors.OKGREEN + player_2.upper() + " WON THE GAME!" + bcolors.ENDC
         print(plyr_2_win)
     elif sol_player_1 == sol_player_2:
         print("This was a draw!")
 
 def play_again():
     q =  input("Would you like to play again? y/n ")
-    if q == 'y' or q == ' y' or q == 'Y' or q == ' Y':
+    if q == 'y' or q == ' y':
         main_game()
-    elif q == 'n' or q == 'N' or q == 'no':
+    elif q == 'n' or q == ' n':
         print("Thank you for visitng my program")
+    while q != 'y' and q != ' y' and q != 'n' and q != ' n':
+        print(bcolors.FAIL + "NOT VALID." + bcolors.ENDC)
+        return play_again()
 
 intro()
 play_again()
