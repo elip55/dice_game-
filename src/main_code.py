@@ -63,9 +63,9 @@ def main_game():
     sol_player_2 = num2 + num3
 
     if sol_player_1 > sol_player_2:
-        print(player_1.upper() + bcolors.OKGREEN + " WON THE GAME!" + bcolors.ENDC)
+        print(bcolors.OKGREEN + player_1.upper() + " WON THE GAME!" + bcolors.ENDC)
     elif sol_player_1 < sol_player_2: 
-        print(player_2.upper() + bcolors.OKGREEN + " WON TTHE GAME!" + bcolors.ENDC)
+        print(bcolors.OKGREEN + player_2.upper() + " WON THE GAME!" + bcolors.ENDC)
     elif sol_player_1 == sol_player_2:
         print("This was a draw!")
 
