@@ -1,4 +1,4 @@
-# color options 
+# color options for invalid inputs
 
 class bcolors:
     HEADER    = '\033[95m'
