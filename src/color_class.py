@@ -1,5 +1,6 @@
-# color options for invalid inputs
 
+
+# color options
 class bcolors:
     HEADER    = '\033[95m'
     OKBLUE    = '\033[94m'
