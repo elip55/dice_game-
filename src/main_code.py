@@ -4,11 +4,14 @@ from color_class import bcolors
 
 def intro():
     rules = input("Do you need to read the rules? y/n ")
-    if rules ==  'yes' or rules == 'Yes' or rules == 'y' or rules == 'Y':
+    if rules ==  'y' or rules == ' y':
         game_rules()
-    else:
+    elif rules == 'n' or rules == ' n':
         print("Okay, lets play")
         main_game()
+    while rules != 'y' and rules != ' y' and rules != 'n' and rules != ' n':
+        print(bcolors.FAIL + "NOT VALID!" + bcolors.ENDC)
+        return intro()
 
 def game_rules():
     print("               RULES         ")
@@ -32,7 +35,7 @@ def main_game():
         print(num0)
         print(num1)
     while roll != 'r':
-        print("This is not a valid input!")
+        print(bcolors.FAIL + "This is not a valid input!" + bcolors.ENDC)
         roll = input("Press 'r' to roll the dice again.")
         if roll == 'r':
             num0 = int(random.randint(min,max))
@@ -48,7 +51,7 @@ def main_game():
         print(num2)
         print(num3)
     while roll != 'r':
-        print("This is not a valid input!")
+        print(bcolors.FAIL + "This is not a valid input!" + bcolors.ENDC)
         roll = input("Press 'r' to roll the dice again.")
         if roll == 'r':
             num2 = int(random.randint(min,max))
@@ -60,11 +63,9 @@ def main_game():
     sol_player_2 = num2 + num3
 
     if sol_player_1 > sol_player_2:
-        plyr_1_win = bcolors.OKBLUE + player_1.upper() + " WON THE GAME!" + bcolors.ENDC
-        print(plyr_1_win)
+        print(player_1.upper() + bcolors.OKGREEN + " WON THE GAME!" + bcolors.ENDC)
     elif sol_player_1 < sol_player_2: 
-        plyr_2_win = bcolors.OKGREEN + player_2.upper() + " WON THE GAME!" + bcolors.ENDC
-        print(plyr_2_win)
+        print(player_2.upper() + bcolors.OKGREEN + " WON TTHE GAME!" + bcolors.ENDC)
     elif sol_player_1 == sol_player_2:
         print("This was a draw!")
 
