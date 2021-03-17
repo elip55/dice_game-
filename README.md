@@ -1,5 +1,3 @@
 # dice_game-
 
-This will be a simple dice game meant to stimulate the coding mind. 
-
-This code will only work with python3 
+This game has been designed to start as a basic python program, and work its way up to advanced. 
