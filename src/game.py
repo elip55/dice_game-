@@ -4,7 +4,6 @@ from .color_class import bcolors
 from .dice_class import Dice
 
 def main_game():
-
     player_1 = input("Input player #1's name: ")
     player_2 = input("Input player #2's name: ")
     die_roll = Dice(1,6)
