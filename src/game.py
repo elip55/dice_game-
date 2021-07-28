@@ -6,8 +6,8 @@ def main_game():
     min = 1
     max = 6
 
-    player_1 = input("Input player #1's name")
-    player_2 = input("Input player #2's name")
+    player_1 = input("Input player #1's name: ")
+    player_2 = input("Input player #2's name: ")
 
     roll = input(f"{player_1}, press 'r' to roll the dice ")
     if roll == 'r':
